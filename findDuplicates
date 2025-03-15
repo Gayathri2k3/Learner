@@ -1,0 +1,20 @@
+class Solution {
+    public List<Integer> findDuplicates(int[] arr) {
+        List<Integer> duplicate=new ArrayList<>();
+        Set<Integer> seen = new HashSet<>();
+        for(int num:arr){
+            if(seen.contains(num)){
+                duplicate.add(num);
+            }
+            else{
+                seen.add(num);
+            }
+        }
+        return duplicate;
+    }
+    public static void main(String args[]){
+        int arr[]={2,3,1,2,3};
+        Solution sol=new Solution();
+        System.out.println(sol.findDuplicates(arr));
+    }
+}

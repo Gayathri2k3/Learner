@@ -1,0 +1,17 @@
+class Solution {
+    public int missingNumber(int arr[]) {
+        long n=arr.length+1;
+        long tot=n*(n+1)/2;
+        long sum=0;
+        for(int num:arr){
+            sum+=num;
+        }
+        return(int) (tot-sum);
+    }
+    public static void main(String args[]){
+       int arr[]={1,2,3,5};
+       int n=5;
+       Solution sol=new Solution();
+       System.out.println(sol.missingNumber(arr));
+    }
+}

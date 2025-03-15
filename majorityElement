@@ -22,7 +22,7 @@ class Solution {
             }
         }
         if(count>arr.length/2){
-            return count;
+            return current;
         }
         else{
             return -1;
